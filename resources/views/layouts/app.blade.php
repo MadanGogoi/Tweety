@@ -24,7 +24,7 @@
         <section class = "px-8 py-4">
             <header class = "container mx-auto">
                     <h1 class = "text-bold text-xl flex ">
-                        <img src="{{ asset('/public/index.png') }}" alt="Logo" width="40" height="40" class = "mr-4">
+                        <img src="{{ url('/index.png') }}" alt="Logo" width="40" height="40" class = "mr-4">
                         Tweety
                     </h1>
             </header>
@@ -32,7 +32,17 @@
     
         <section class="py-4">
             <main class = " container mx-auto">
-                @yield('content')
+                <div class="lg:flex justify-between">
+                    <div class = "lg:w-32"> 
+                        @include('_sidebar_links')
+                    </div>
+                    <div class ="lg:flex-1 lg:mx-10" style="max-width: 700px">
+                        @yield('content')
+                    </div>
+                    <div class ="lg:w-1/6 bg-blue-100 rounded-lg p-4"> 
+                        @include('_friends_lists')
+                     </div>
+                </div>
             </main>
         </section>
     </div>

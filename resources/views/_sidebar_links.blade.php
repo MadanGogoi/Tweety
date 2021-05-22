@@ -1,7 +1,7 @@
 <ul>
     <li>
         <a class = "font-bold text-xl mb-4 block "
-        href="/home"> 
+        href=" {{ route('home') }} "> 
             Home
         </a>
     </li>
@@ -37,7 +37,7 @@
     </li>
     <li>
         <a class = "font-bold text-xl mb-4 block"
-        href="/"> 
+        href="{{ route('profile',auth()->user()) }}"> 
             Profile
         </a>
     </li>
